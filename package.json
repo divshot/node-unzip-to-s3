@@ -1,0 +1,30 @@
+{
+  "name": "node-unzip-to-s3",
+  "version": "0.0.1",
+  "description": "node-unzip-to-s3 ================",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha --recursive --reporter spec ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/divshot/node-unzip-to-s3.git"
+  },
+  "keywords": [
+    "zip",
+    "unzip",
+    "amazon",
+    "aws",
+    "s3",
+    "upload"
+  ],
+  "author": "Divshot",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/divshot/node-unzip-to-s3/issues"
+  },
+  "devDependencies": {
+    "chai": "~1.8.1",
+    "mocha": "~1.13.0"
+  }
+}
