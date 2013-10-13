@@ -1,6 +1,6 @@
 # unzip-to-s3
 
-Unzip files directly Amazon S3 using streams.
+Unzip files directly to Amazon S3 using streams.
 
 ## Install
 
