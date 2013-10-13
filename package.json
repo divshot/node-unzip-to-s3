@@ -1,6 +1,6 @@
 {
   "name": "unzip-to-s3",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Unzip files directly Amazon S3 using streams.",
   "main": "index.js",
   "scripts": {
