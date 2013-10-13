@@ -1,6 +1,6 @@
 {
   "name": "node-unzip-to-s3",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "node-unzip-to-s3 ================",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,10 @@
   },
   "devDependencies": {
     "chai": "~1.8.1",
-    "mocha": "~1.13.0"
+    "mocha": "~1.13.0",
+    "archiver": "~0.4.10",
+    "sinon": "~1.7.3",
+    "proxyquire": "~0.5.1"
   },
   "dependencies": {
     "unzip": "~0.1.9",
