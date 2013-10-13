@@ -78,9 +78,9 @@ describe('Upload to S3', function () {
       expect(err instanceof Error).to.be.ok;
     });
     
-    it('sets the directory option default if none is provided', function () {
+    it('sets the directory path option default if none is provided', function () {
       var _options = internals._validateOptions(options);
-      expect(_options.directory).to.equal('/');
+      expect(_options.path).to.equal('/');
     });
   });
   
@@ -126,10 +126,10 @@ describe('Upload to S3', function () {
     var uploadToS3 = proxyquire('../lib/index', { 'knox-mpu': knoxMpuSpy });
     var internals = uploadToS3.internals;
     var returnStream = through();
-    var directory = 'directory';
+    var dirPath = 'dirPath';
     var client = internals._createClient(clientOptions);
     var zipStream = internals.unzipFiles(fs.createReadStream(zipFilePath));
-    var uploadStream = internals.uploadFiles(client, returnStream, directory);
+    var uploadStream = internals.uploadFiles(client, returnStream, dirPath);
     
     zipStream.pipe(uploadStream).on('end', function () {
       var args = knoxMpuSpy.args[0];
