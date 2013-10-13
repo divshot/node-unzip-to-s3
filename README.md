@@ -19,8 +19,7 @@ var bucketUpload = unzipToS3.createClient({
   key: 'some_key',        // required
   secret: 'some_secret',  // required
   bucket: 'some_bucket',  // required
-  directory: 'nodezip',   // optional
-  token: ''               // optional
+  path: 'some/path'   // optional
 });
 
 // Create the zip read stream
@@ -30,10 +29,17 @@ var zipStream = fs.createReadStream('path/to/some/file.zip');
 bucketUpload(zipStream).on('data', function (file) {
   // "file" is the file stream and object that was inflated
   // from the zip file
-});
+}).pipe(process.stdout);
 ```
 
-**unzip-to-s3** uses [Knox](https://github.com/LearnBoost/knox) underneath, so refer to ther [Client Creation Options](https://github.com/LearnBoost/knox#client-creation-options) for all client optionts.
+## Client Options
+
+* ` key ` - your AWS key
+* ` secret ` - your AWS secret
+* ` bucket ` - your S3 bucket
+* ` path ` - the path to store your objects on S3
+
+**unzip-to-s3** uses [Knox](https://github.com/LearnBoost/knox) underneath, so refer to their [Client Creation Options](https://github.com/LearnBoost/knox#client-creation-options) for all client options.
 
 ## Run tests
 
