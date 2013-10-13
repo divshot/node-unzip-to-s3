@@ -1,7 +1,7 @@
 {
-  "name": "node-unzip-to-s3",
+  "name": "unzip-to-s3",
   "version": "0.1.0",
-  "description": "node-unzip-to-s3 ================",
+  "description": "Unzip files directly Amazon S3 using streams.",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha --recursive --reporter spec ./test"
