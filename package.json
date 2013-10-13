@@ -26,5 +26,11 @@
   "devDependencies": {
     "chai": "~1.8.1",
     "mocha": "~1.13.0"
+  },
+  "dependencies": {
+    "unzip": "~0.1.9",
+    "knox": "~0.8.6",
+    "through": "~2.3.4",
+    "knox-mpu": "~0.1.1"
   }
 }
